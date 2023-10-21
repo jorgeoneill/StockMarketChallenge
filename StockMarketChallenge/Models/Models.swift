@@ -52,11 +52,10 @@ struct Models {
         var data: [Models.TickerData]
     }
 
-    public enum NetworkError: Error {
+    enum NetworkError: Error {
         case invalidURL
         case invalidServerResponse
         case emptyResponse
-        case decodingError
     }
 
     public enum DatePickerType {

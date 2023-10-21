@@ -29,16 +29,12 @@ class DataService {
             throw Models.NetworkError.invalidServerResponse
         }
 
-        do {
-            let historicalDataItems = try JSONDecoder().decode(
-                Models.Assets.self,
-                from: data
-            ).data
-            return historicalDataItems
-        }
-        catch {
-            throw Models.NetworkError.decodingError
-        }
+        let historicalDataItems = try JSONDecoder().decode(
+            Models.Assets.self,
+            from: data
+        ).data
+
+        return historicalDataItems
     }
 
     static func fetchLatestAssetData(for symbol: String) async throws -> Models.AssetData {
@@ -55,21 +51,16 @@ class DataService {
             throw Models.NetworkError.invalidServerResponse
         }
 
-        do {
-            let latestData = try JSONDecoder().decode(
-                Models.Assets.self,
-                from: data
-            )
+        let latestData = try JSONDecoder().decode(
+            Models.Assets.self,
+            from: data
+        )
 
-            guard let latestDataItem = latestData.data.first else {
-                throw Models.NetworkError.emptyResponse
-            }
+        guard let latestDataItem = latestData.data.first else {
+            throw Models.NetworkError.emptyResponse
+        }
 
-            return latestDataItem
-        }
-        catch {
-            throw Models.NetworkError.decodingError
-        }
+        return latestDataItem
     }
 
     static func fetchTickers() async throws -> Models.Tickers {
@@ -86,15 +77,10 @@ class DataService {
             throw Models.NetworkError.invalidServerResponse
         }
 
-        do {
-            let tickers = try JSONDecoder().decode(
-                Models.Tickers.self,
-                from: data
-            )
-            return tickers
-        }
-        catch {
-            throw Models.NetworkError.decodingError
-        }
+        let tickers = try JSONDecoder().decode(
+            Models.Tickers.self,
+            from: data
+        )
+        return tickers
     }
 }

@@ -32,17 +32,29 @@ enum Constants {
                 static let closingPrice = "Closing Price:"
                 static let chartXLabel = "Date"
                 static let chartYLabel = "Price"
+                static let searchPrompt = "Stock name"
             }
 
             enum DefaultValues {
                 static let closingPrice = "ND"
                 static let closingDate = "ND"
+                static let alertTitle = "Oops!"
+                static let alertDescription = "There seems to be a problem"
+                static let alertPrimaryButtonTitle = "Ok"
+                static let alertSecondaryButtonTitle = "Cancel"
+                static let alertButtonTitleRetry = "Retry"
+            }
+
+            enum Errors {
+                static let invalidURL = "Data Service URL is incorrect"
+                static let invalidServerResponse = "Invalid response received from Data Service"
+                static let emptyResponse = "Data Service returned an empty response"
             }
         }
 
         enum Layout {
             enum Dimensions {
-                static let outsidePadding: CGFloat = 32
+                static let outsidePadding: CGFloat = 36
                 static let verticalPadding: CGFloat = 18
                 static let horizontalPadding: CGFloat = 18
             }

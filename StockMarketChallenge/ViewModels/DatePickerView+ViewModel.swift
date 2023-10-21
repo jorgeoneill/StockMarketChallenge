@@ -9,13 +9,12 @@ import Foundation
 
 extension DatePickerView {
     @MainActor class ViewModel: ObservableObject {
-        let type: Models.DatePickerType
         @Published var startDate: Date
         @Published var endDate: Date
-
         var label: String {
             return type == .to ? "To:" : "From:"
         }
+        let type: Models.DatePickerType
 
         init(type: Models.DatePickerType,
              startDate: Date,

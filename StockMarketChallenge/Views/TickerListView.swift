@@ -9,10 +9,12 @@ import SwiftUI
 
 struct TickerListView: View {
     @StateObject private var viewModel = ViewModel()
+    @State private var searchTerm: String = ""
+    @State private var isAlertVisible = false
 
     var body: some View {
         NavigationStack {
-            List(viewModel.tickerList) { ticker in
+            List(viewModel.filteredTickerList) { ticker in
                 NavigationLink(value: ticker) {
                     let tickerCellViewModel = TickerCellView.ViewModel(ticker: ticker)
                     TickerCellView(viewModel: tickerCellViewModel)
@@ -23,13 +25,52 @@ struct TickerListView: View {
                 AssetDetailView(viewModel: assetDetailViewModel)
             })
             .navigationTitle(Constants.UI.Labels.Titles.navigationTitle)
-            .onAppear {
+            .searchable(
+                text: $searchTerm,
+                prompt: Constants.UI.Labels.Titles.searchPrompt
+            )
+            .onChange(of: searchTerm, { _, newValue in
+                let trimmedTerm = newValue.trimmingCharacters(in: .whitespaces)
+                viewModel.filterValues(by: trimmedTerm)
+            })
+            .task {
                 do {
-                    try viewModel.updateTickerList()
+                    try await viewModel.updateTickerList()
+                } catch Models.NetworkError.emptyResponse {
+                    viewModel.alertDescription = Constants.UI.Labels.Errors.emptyResponse
+                    isAlertVisible = true
+                } catch Models.NetworkError.invalidServerResponse {
+                    viewModel.alertDescription = Constants.UI.Labels.Errors.invalidServerResponse
+                    isAlertVisible = true
+                } catch Models.NetworkError.invalidURL {
+                    viewModel.alertDescription = Constants.UI.Labels.Errors.invalidURL
+                    isAlertVisible = true
+                } catch {
+                    viewModel.alertDescription = error.localizedDescription
+                    isAlertVisible = true
                 }
-                catch {
-                    print("[TickerListView] updateTickerList error: \(error)")
-                }
+            }
+            .sheet(isPresented: $isAlertVisible) {
+                let alerViewViewModel = AlertView.ViewModel(
+                    description: viewModel.alertDescription,
+                    primaryButtonTitle: Constants.UI.Labels.DefaultValues.alertButtonTitleRetry,
+                    primaryButtonAction: {
+                        Task {
+                            do {
+                                try await viewModel.updateTickerList()
+                                isAlertVisible = false
+                            }
+                            catch {
+                                isAlertVisible = true
+                            }
+                        }
+                    },
+                    secondaryButtonTitle: Constants.UI.Labels.DefaultValues.alertSecondaryButtonTitle,
+                    secondaryButtonAction: {
+                        isAlertVisible = false
+                    }
+                )
+                AlertView(viewModel: alerViewViewModel)
             }
         }
     }

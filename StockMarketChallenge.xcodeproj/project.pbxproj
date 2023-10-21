@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F57D1A842AE420470070E309 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D1A832AE420470070E309 /* Models.swift */; };
+		F57D1A862AE420A20070E309 /* TickerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D1A852AE420A20070E309 /* TickerListView.swift */; };
+		F57D1A882AE420B20070E309 /* TickerCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D1A872AE420B20070E309 /* TickerCellView.swift */; };
+		F57D1A8A2AE420BE0070E309 /* AssetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D1A892AE420BE0070E309 /* AssetDetailView.swift */; };
+		F57D1A8C2AE420DC0070E309 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D1A8B2AE420DC0070E309 /* DatePickerView.swift */; };
+		F57D1A8E2AE420EE0070E309 /* TickerListView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D1A8D2AE420EE0070E309 /* TickerListView+ViewModel.swift */; };
+		F57D1A902AE421030070E309 /* TickerCellView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D1A8F2AE421030070E309 /* TickerCellView+ViewModel.swift */; };
+		F57D1A922AE421100070E309 /* AssetDetailView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D1A912AE421100070E309 /* AssetDetailView+ViewModel.swift */; };
+		F57D1A942AE4211D0070E309 /* DatePickerView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D1A932AE4211D0070E309 /* DatePickerView+ViewModel.swift */; };
+		F57D1A962AE421620070E309 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D1A952AE421620070E309 /* DataService.swift */; };
+		F57D1A982AE4216F0070E309 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D1A972AE4216F0070E309 /* Endpoints.swift */; };
+		F57D1A9A2AE4217A0070E309 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D1A992AE4217A0070E309 /* Constants.swift */; };
+		F57D1A9C2AE4219B0070E309 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D1A9B2AE4219B0070E309 /* Formatters.swift */; };
 		F5962D7D2AE41F4800398A5D /* StockMarketChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5962D7C2AE41F4800398A5D /* StockMarketChallengeApp.swift */; };
 		F5962D7F2AE41F4800398A5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5962D7E2AE41F4800398A5D /* ContentView.swift */; };
 		F5962D812AE41F4A00398A5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5962D802AE41F4A00398A5D /* Assets.xcassets */; };
@@ -14,6 +27,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F57D1A832AE420470070E309 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		F57D1A852AE420A20070E309 /* TickerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerListView.swift; sourceTree = "<group>"; };
+		F57D1A872AE420B20070E309 /* TickerCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerCellView.swift; sourceTree = "<group>"; };
+		F57D1A892AE420BE0070E309 /* AssetDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailView.swift; sourceTree = "<group>"; };
+		F57D1A8B2AE420DC0070E309 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		F57D1A8D2AE420EE0070E309 /* TickerListView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TickerListView+ViewModel.swift"; sourceTree = "<group>"; };
+		F57D1A8F2AE421030070E309 /* TickerCellView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TickerCellView+ViewModel.swift"; sourceTree = "<group>"; };
+		F57D1A912AE421100070E309 /* AssetDetailView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AssetDetailView+ViewModel.swift"; sourceTree = "<group>"; };
+		F57D1A932AE4211D0070E309 /* DatePickerView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DatePickerView+ViewModel.swift"; sourceTree = "<group>"; };
+		F57D1A952AE421620070E309 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		F57D1A972AE4216F0070E309 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		F57D1A992AE4217A0070E309 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F57D1A9B2AE4219B0070E309 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		F57D1A9D2AE423D80070E309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F5962D792AE41F4800398A5D /* StockMarketChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockMarketChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5962D7C2AE41F4800398A5D /* StockMarketChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockMarketChallengeApp.swift; sourceTree = "<group>"; };
 		F5962D7E2AE41F4800398A5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +60,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F57D1A802AE420210070E309 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F57D1A8D2AE420EE0070E309 /* TickerListView+ViewModel.swift */,
+				F57D1A8F2AE421030070E309 /* TickerCellView+ViewModel.swift */,
+				F57D1A912AE421100070E309 /* AssetDetailView+ViewModel.swift */,
+				F57D1A932AE4211D0070E309 /* DatePickerView+ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F57D1A812AE4202E0070E309 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F5962D7E2AE41F4800398A5D /* ContentView.swift */,
+				F57D1A852AE420A20070E309 /* TickerListView.swift */,
+				F57D1A872AE420B20070E309 /* TickerCellView.swift */,
+				F57D1A892AE420BE0070E309 /* AssetDetailView.swift */,
+				F57D1A8B2AE420DC0070E309 /* DatePickerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F57D1A822AE420390070E309 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F57D1A832AE420470070E309 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F5962D702AE41F4800398A5D = {
 			isa = PBXGroup;
 			children = (
@@ -52,8 +110,15 @@
 		F5962D7B2AE41F4800398A5D /* StockMarketChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				F57D1A9D2AE423D80070E309 /* Info.plist */,
+				F57D1A822AE420390070E309 /* Models */,
+				F57D1A812AE4202E0070E309 /* Views */,
+				F57D1A802AE420210070E309 /* ViewModels */,
 				F5962D7C2AE41F4800398A5D /* StockMarketChallengeApp.swift */,
-				F5962D7E2AE41F4800398A5D /* ContentView.swift */,
+				F57D1A952AE421620070E309 /* DataService.swift */,
+				F57D1A972AE4216F0070E309 /* Endpoints.swift */,
+				F57D1A992AE4217A0070E309 /* Constants.swift */,
+				F57D1A9B2AE4219B0070E309 /* Formatters.swift */,
 				F5962D802AE41F4A00398A5D /* Assets.xcassets */,
 				F5962D822AE41F4A00398A5D /* StockMarketChallenge.entitlements */,
 				F5962D832AE41F4A00398A5D /* Preview Content */,
@@ -139,8 +204,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F57D1A862AE420A20070E309 /* TickerListView.swift in Sources */,
+				F57D1A942AE4211D0070E309 /* DatePickerView+ViewModel.swift in Sources */,
+				F57D1A982AE4216F0070E309 /* Endpoints.swift in Sources */,
+				F57D1A9C2AE4219B0070E309 /* Formatters.swift in Sources */,
+				F57D1A902AE421030070E309 /* TickerCellView+ViewModel.swift in Sources */,
+				F57D1A962AE421620070E309 /* DataService.swift in Sources */,
+				F57D1A8E2AE420EE0070E309 /* TickerListView+ViewModel.swift in Sources */,
+				F57D1A842AE420470070E309 /* Models.swift in Sources */,
+				F57D1A8A2AE420BE0070E309 /* AssetDetailView.swift in Sources */,
+				F57D1A882AE420B20070E309 /* TickerCellView.swift in Sources */,
+				F57D1A8C2AE420DC0070E309 /* DatePickerView.swift in Sources */,
 				F5962D7F2AE41F4800398A5D /* ContentView.swift in Sources */,
+				F57D1A9A2AE4217A0070E309 /* Constants.swift in Sources */,
 				F5962D7D2AE41F4800398A5D /* StockMarketChallengeApp.swift in Sources */,
+				F57D1A922AE421100070E309 /* AssetDetailView+ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +352,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StockMarketChallenge/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -312,6 +391,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StockMarketChallenge/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

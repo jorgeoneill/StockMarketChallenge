@@ -34,7 +34,6 @@ extension AssetDetailView {
             }
         }
 
-
         init(ticker: Models.TickerData) {
             tickerSymbol = ticker.symbol
             assetTitle = ticker.name
@@ -76,8 +75,6 @@ extension AssetDetailView {
                 endDate: selectedEndDate
             )
         }
-
-
 
         func filterHistoricalDataBySelectedPeriod() {
             selectedHistoricalDataItems = historicalDataItems.filter { $0.date > selectedStartDate && $0.date < selectedEndDate }

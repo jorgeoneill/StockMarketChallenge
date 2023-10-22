@@ -35,28 +35,35 @@ struct AssetDetailView: View {
                 Constants.UI.Layout.Dimensions.verticalPadding
             )
 
-            Chart {
-                ForEach(viewModel.selectedHistoricalDataItems) { dataItem in
-                    LineMark(
-                        x: .value(
-                            Constants.UI.Labels.Titles.chartXLabel,
-                            dataItem.date
-                        ),
-                        y: .value(
-                            Constants.UI.Labels.Titles.chartYLabel,
-                            dataItem.adjustedClosingPrice
+            ZStack {
+                RoundedRectangle(cornerRadius: Constants.UI.Layout.Dimensions.chartBackgroundCornerRadius)
+                    .fill(Constants.UI.Colors.chartBackgroundGradient)
+                Chart {
+
+                    ForEach(viewModel.selectedHistoricalDataItems) { dataItem in
+                        LineMark(
+                            x: .value(
+                                Constants.UI.Labels.Titles.chartXLabel,
+                                dataItem.date
+                            ),
+                            y: .value(
+                                Constants.UI.Labels.Titles.chartYLabel,
+                                dataItem.adjustedClosingPrice
+                            )
                         )
-                    )
+                        .foregroundStyle(Constants.UI.Colors.chartLineGradient)
+                        .lineStyle(StrokeStyle(lineWidth: Constants.UI.Layout.Dimensions.chartLineWidth))
+                    }
+
                 }
+                .chartYScale(
+                    domain: .automatic(
+                        includesZero: false)
+                )
+                .padding(
+                    Constants.UI.Layout.Dimensions.verticalPadding
+                )
             }
-            .chartYScale(
-                domain: .automatic(
-                    includesZero: false)
-            )
-            .padding(
-                [.vertical],
-                Constants.UI.Layout.Dimensions.verticalPadding
-            )
 
             HStack {
                 if let fromDatePickerViewModel = viewModel.fromDatePickerViewModel {

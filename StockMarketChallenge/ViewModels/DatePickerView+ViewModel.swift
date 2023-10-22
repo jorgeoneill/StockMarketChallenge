@@ -12,13 +12,14 @@ extension DatePickerView {
         @Published var startDate: Date
         @Published var endDate: Date
         var label: String {
-            return type == .to ? "To:" : "From:"
+            return type == .to ? Constants.UI.Labels.Titles.datePickerTo : Constants.UI.Labels.Titles.datePickerFrom
         }
         let type: Models.DatePickerType
 
-        init(type: Models.DatePickerType,
-             startDate: Date,
-             endDate: Date
+        init(
+            type: Models.DatePickerType,
+            startDate: Date,
+            endDate: Date
         ) {
             self.type = type
             self.startDate = startDate

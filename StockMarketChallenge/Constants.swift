@@ -5,12 +5,12 @@
 //  Created by Jorge O'Neill on 18/10/2023.
 //
 
-import Foundation
+import SwiftUI
 
 enum Constants {
     enum API {
         enum URL {
-            static let accessKeyValue = "a7d874539227c571b304e3e1a1ff3f45"
+            static let accessKeyValue = "9d3f27847271ea8cb0cba77e9fb08ecf"
             static let endOfDayLatestPath = "/v1/eod/latest"
             static let endOfDayHistoricalPath = "/v1/eod"
             static let tickersPath = "/v1/tickers"
@@ -33,6 +33,8 @@ enum Constants {
                 static let chartXLabel = "Date"
                 static let chartYLabel = "Price"
                 static let searchPrompt = "Stock name"
+                static let datePickerFrom = "From"
+                static let datePickerTo = "To"
             }
 
             enum DefaultValues {
@@ -57,7 +59,15 @@ enum Constants {
                 static let outsidePadding: CGFloat = 36
                 static let verticalPadding: CGFloat = 18
                 static let horizontalPadding: CGFloat = 18
+                static let chartBackgroundCornerRadius: CGFloat = 10
+                static let chartLineWidth: CGFloat = 3
+
             }
+        }
+
+        enum Colors {
+            static let chartBackgroundGradient = LinearGradient(gradient: Gradient(colors: [.gray.opacity(0.0), .gray.opacity(0.3)]), startPoint: .top, endPoint: .bottom)
+            static let chartLineGradient = LinearGradient(gradient: Gradient(colors: [.gray.opacity(0.2), .gray.opacity(0.6)]), startPoint: .bottom, endPoint: .top)
         }
     }
 }
